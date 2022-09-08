@@ -2,7 +2,7 @@
 ucb_custom_menus.add_content:
   title: 'Add content 2'
   description: ''
-  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  route_name: ucb_custom_menus.add_content
   parent: system.admin_content
   weight: 0
 
@@ -10,19 +10,19 @@ ucb_custom_menus.add_content:
 ucb_custom_menus.add_content.general:
   title: 'General'
   description: ''
-  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  route_name: ucb_custom_menus.add_content.general
   parent: ucb_custom_menus.add_content
   weight: 0
 ucb_custom_menus.add_content.news_and_articles:
   title: 'News and Articles'
   description: ''
-  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  route_name: ucb_custom_menus.add_content.news_and_articles
   parent: ucb_custom_menus.add_content
   weight: 1
 ucb_custom_menus.add_content.people:
   title: 'People'
   description: ''
-  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  route_name: ucb_custom_menus.add_content.people
   parent: ucb_custom_menus.add_content
   weight: 2
 

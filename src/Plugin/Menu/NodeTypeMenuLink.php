@@ -16,7 +16,7 @@ class NodeTypeMenuLink extends MenuLinkDefault {
 	protected $nodeType;
 
 	/**
-	 * AddNodeMenuLink a new MenuLinkDefault.
+	 * Creates a new NodeTypeMenuLink.
 	 *
 	 * @param array $configuration
 	 *   A configuration array containing information about the plugin instance.

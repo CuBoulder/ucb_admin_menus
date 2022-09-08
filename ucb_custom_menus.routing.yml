@@ -1,0 +1,40 @@
+ucb_custom_menus.add_content:
+  path: '/add_content'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::overview'
+    _title: 'Add content'
+    link_id: 'ucb_custom_menus.add_content'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+
+ucb_custom_menus.add_content.general:
+  path: '/add_content/general'
+  defaults:
+    _controller: '\Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _title: 'Add content: General'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+
+ucb_custom_menus.add_content.news_and_articles:
+  path: '/add_content/news_and_articles'
+  defaults:
+    _controller: '\Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _title: 'Add content: News and articles'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true
+
+ucb_custom_menus.add_content.people:
+  path: '/add_content/people'
+  defaults:
+    _controller: '\Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _title: 'Add content: People'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: true

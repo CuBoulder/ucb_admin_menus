@@ -1,0 +1,9 @@
+name: CU Boulder Custom Menus
+description: 'Provides custom menus for CU Boulder sites.'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - node
+  - system
+version: '1.0'
+package: CU Boulder

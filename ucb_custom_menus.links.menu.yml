@@ -1,0 +1,57 @@
+# --- Top-level menus ---
+ucb_custom_menus.add_content:
+  title: 'Add content 2'
+  description: ''
+  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  parent: system.admin_content
+  weight: 0
+
+
+ucb_custom_menus.add_content.general:
+  title: 'General'
+  description: ''
+  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  parent: ucb_custom_menus.add_content
+  weight: 0
+ucb_custom_menus.add_content.news_and_articles:
+  title: 'News and Articles'
+  description: ''
+  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  parent: ucb_custom_menus.add_content
+  weight: 1
+ucb_custom_menus.add_content.people:
+  title: 'People'
+  description: ''
+  route_name: node.add_page # TODO: Custom page route in ucb_custom_menus.routing.yml
+  parent: ucb_custom_menus.add_content
+  weight: 2
+
+# --- General ---
+ucb_custom_menus.add_content.general.basic_page:
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.add_content.general
+  weight: 0
+ucb_custom_menus.add_content.general.how_to_page:
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.add_content.general
+  weight: 1
+
+# --- News and Articles ---
+ucb_custom_menus.add_content.news_and_articles.ucb_article:
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.add_content.news_and_articles
+  weight: 0
+ucb_custom_menus.add_content.news_and_articles.ucb_article_list:
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.add_content.news_and_articles
+  weight: 1
+
+# --- People ---
+ucb_custom_menus.add_content.people.ucb_person:
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.add_content.people
+  weight: 0
+ucb_custom_menus.add_content.people.ucb_people_list_page:
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.add_content.people
+  weight: 1

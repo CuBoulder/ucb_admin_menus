@@ -1,0 +1,6 @@
+{
+	"name": "cu-boulder/ucb_custom_menus",
+	"description": "Provides custom menus for CU Boulder sites.",
+	"license": "GPL-2.0-or-later",
+	"type": "drupal-custom-module"
+}

@@ -78,4 +78,25 @@ class NodeTypeMenuLink extends MenuLinkDefault {
 	public function getRouteParameters() {
 		return ['node_type' => $this->nodeType->id()];
 	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getCacheContexts() {
+		return $this->nodeType->getCacheContexts();
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getCacheTags() {
+		return $this->nodeType->getCacheTags();
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getCacheMaxAge() {
+		return $this->nodeType->getCacheMaxAge();
+	}
 }

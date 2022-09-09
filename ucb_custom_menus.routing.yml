@@ -1,40 +1,40 @@
-ucb_custom_menus.add_content:
-  path: '/add_content'
+node.add_page:
+  path: '/node/add'
   defaults:
-    _controller: '\Drupal\system\Controller\SystemController::overview'
     _title: 'Add content'
+    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::multiMenuOverview'
     link_id: 'ucb_custom_menus.add_content'
-  requirements:
-    _permission: 'access administration pages'
   options:
-    _admin_route: true
+    _node_operation_route: true
+  requirements:
+    _entity_create_any_access: 'node'
 
 ucb_custom_menus.add_content.general:
-  path: '/add_content/general'
+  path: '/node/add/category/general'
   defaults:
-    _controller: '\Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
     _title: 'Add content: General'
+    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
-    _permission: 'access administration pages'
+    _entity_create_any_access: 'node'
   options:
     _admin_route: true
 
 ucb_custom_menus.add_content.news_and_articles:
-  path: '/add_content/news_and_articles'
+  path: '/node/add/category/news_and_articles'
   defaults:
-    _controller: '\Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
-    _title: 'Add content: News and articles'
+    _title: 'Add content: News and Articles'
+    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
-    _permission: 'access administration pages'
+    _entity_create_any_access: 'node'
   options:
     _admin_route: true
 
 ucb_custom_menus.add_content.people:
-  path: '/add_content/people'
+  path: '/node/add/category/people'
   defaults:
-    _controller: '\Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
     _title: 'Add content: People'
+    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
-    _permission: 'access administration pages'
+    _entity_create_any_access: 'node'
   options:
     _admin_route: true

@@ -1,0 +1,8 @@
+services:
+  ucb_custom_menus.node_type_breadcrumb_builder:
+    class: 'Drupal\ucb_custom_menus\NodeTypeBreadcrumbBuilder'
+    arguments: ['@plugin.manager.menu.link']
+    tags:
+      -
+        name: breadcrumb_builder
+        priority: 1010

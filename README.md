@@ -1,2 +1,2 @@
-# CU Boulder Custom Menus
-Provides custom menus for CU Boulder sites.
+# CU Boulder Admin Menus
+Provides custom admin menus for CU Boulder sites.

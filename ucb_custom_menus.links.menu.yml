@@ -1,5 +1,5 @@
 # --- Top-level menus ---
-ucb_custom_menus.add_content:
+'admin_toolbar_tools.extra_links:node.add':
   title: 'Add content'
   description: ''
   route_name: node.add_page
@@ -7,51 +7,51 @@ ucb_custom_menus.add_content:
   weight: 0
 
 
-ucb_custom_menus.add_content.general:
+ucb_custom_menus.content_groups.general:
   title: 'General'
   description: ''
-  route_name: ucb_custom_menus.add_content.general
-  parent: ucb_custom_menus.add_content
+  route_name: ucb_custom_menus.content_groups.general
+  parent: 'admin_toolbar_tools.extra_links:node.add'
   weight: 0
-ucb_custom_menus.add_content.news_and_articles:
+ucb_custom_menus.content_groups.news_and_articles:
   title: 'News and Articles'
   description: ''
-  route_name: ucb_custom_menus.add_content.news_and_articles
-  parent: ucb_custom_menus.add_content
+  route_name: ucb_custom_menus.content_groups.news_and_articles
+  parent: 'admin_toolbar_tools.extra_links:node.add'
   weight: 1
-ucb_custom_menus.add_content.people:
+ucb_custom_menus.content_groups.people:
   title: 'People'
   description: ''
-  route_name: ucb_custom_menus.add_content.people
-  parent: ucb_custom_menus.add_content
+  route_name: ucb_custom_menus.content_groups.people
+  parent: 'admin_toolbar_tools.extra_links:node.add'
   weight: 2
 
 # --- General ---
-ucb_custom_menus.add_content.node__basic_page:
+'admin_toolbar_tools.extra_links:node.add.basic_page':
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
-  parent: ucb_custom_menus.add_content.general
+  parent: ucb_custom_menus.content_groups.general
   weight: 0
-ucb_custom_menus.add_content.node__how_to_page:
+'admin_toolbar_tools.extra_links:node.add.how_to_page':
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
-  parent: ucb_custom_menus.add_content.general
+  parent: ucb_custom_menus.content_groups.general
   weight: 1
 
 # --- News and Articles ---
-ucb_custom_menus.add_content.node__ucb_article:
+'admin_toolbar_tools.extra_links:node.add.ucb_article':
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
-  parent: ucb_custom_menus.add_content.news_and_articles
+  parent: ucb_custom_menus.content_groups.news_and_articles
   weight: 0
-ucb_custom_menus.add_content.node__ucb_article_list:
+'admin_toolbar_tools.extra_links:node.add.ucb_article_list':
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
-  parent: ucb_custom_menus.add_content.news_and_articles
+  parent: ucb_custom_menus.content_groups.news_and_articles
   weight: 1
 
 # --- People ---
-ucb_custom_menus.add_content.node__ucb_person:
+'admin_toolbar_tools.extra_links:node.add.ucb_person':
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
-  parent: ucb_custom_menus.add_content.people
+  parent: ucb_custom_menus.content_groups.people
   weight: 0
-ucb_custom_menus.add_content.node__ucb_people_list_page:
+'admin_toolbar_tools.extra_links:node.add.ucb_people_list_page':
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
-  parent: ucb_custom_menus.add_content.people
+  parent: ucb_custom_menus.content_groups.people
   weight: 1

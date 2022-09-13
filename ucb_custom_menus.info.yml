@@ -3,6 +3,7 @@ description: 'Provides custom menus for CU Boulder sites.'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
+  - admin_toolbar_tools
   - node
   - system
 version: '1.0'

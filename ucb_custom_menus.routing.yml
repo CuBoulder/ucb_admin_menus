@@ -3,13 +3,13 @@ node.add_page:
   defaults:
     _title: 'Add content'
     _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::multiMenuOverview'
-    link_id: 'ucb_custom_menus.add_content'
+    link_id: 'admin_toolbar_tools.extra_links:node.add'
   requirements:
     _entity_create_any_access: 'node'
   options:
     _node_operation_route: true
 
-ucb_custom_menus.add_content.general:
+ucb_custom_menus.content_groups.general:
   path: '/node/add/group/general'
   defaults:
     _title: 'Add content: General'
@@ -19,7 +19,7 @@ ucb_custom_menus.add_content.general:
   options:
     _admin_route: true
 
-ucb_custom_menus.add_content.news_and_articles:
+ucb_custom_menus.content_groups.news_and_articles:
   path: '/node/add/group/news_and_articles'
   defaults:
     _title: 'Add content: News and Articles'
@@ -29,7 +29,7 @@ ucb_custom_menus.add_content.news_and_articles:
   options:
     _admin_route: true
 
-ucb_custom_menus.add_content.people:
+ucb_custom_menus.content_groups.people:
   path: '/node/add/group/people'
   defaults:
     _title: 'Add content: People'

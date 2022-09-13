@@ -1,6 +1,6 @@
 services:
-  ucb_custom_menus.node_type_breadcrumb_builder:
-    class: 'Drupal\ucb_custom_menus\NodeTypeBreadcrumbBuilder'
+  ucb_admin_menus.node_type_breadcrumb_builder:
+    class: 'Drupal\ucb_admin_menus\NodeTypeBreadcrumbBuilder'
     arguments: ['@plugin.manager.menu.link']
     tags:
       -

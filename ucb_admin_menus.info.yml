@@ -1,5 +1,5 @@
-name: CU Boulder Custom Menus
-description: 'Provides custom menus for CU Boulder sites.'
+name: CU Boulder Admin Menus
+description: 'Provides custom admin menus for CU Boulder sites.'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:

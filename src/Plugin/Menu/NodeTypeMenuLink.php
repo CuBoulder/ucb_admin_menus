@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ucb_custom_menus\Plugin\Menu;
+namespace Drupal\ucb_admin_menus\Plugin\Menu;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Menu\MenuLinkDefault;

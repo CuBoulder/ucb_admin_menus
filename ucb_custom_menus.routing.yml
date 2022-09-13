@@ -2,48 +2,48 @@ node.add_page:
   path: '/node/add'
   defaults:
     _title: 'Add content'
-    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::multiMenuOverview'
+    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::multiMenuOverview'
     link_id: 'admin_toolbar_tools.extra_links:node.add'
   requirements:
     _entity_create_any_access: 'node'
   options:
     _node_operation_route: true
 
-ucb_custom_menus.content_groups.general:
+ucb_admin_menus.content_groups.general:
   path: '/node/add/group/general'
   defaults:
     _title: 'Add content: General'
-    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
     _entity_create_any_access: 'node'
   options:
     _admin_route: true
 
-ucb_custom_menus.content_groups.news_and_articles:
+ucb_admin_menus.content_groups.news_and_articles:
   path: '/node/add/group/news_and_articles'
   defaults:
     _title: 'Add content: News and Articles'
-    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
     _entity_create_any_access: 'node'
   options:
     _admin_route: true
 
-ucb_custom_menus.content_groups.forms:
+ucb_admin_menus.content_groups.forms:
   path: '/node/add/group/forms'
   defaults:
     _title: 'Add content: Forms'
-    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
     _entity_create_any_access: 'node'
   options:
     _admin_route: true
 
-ucb_custom_menus.content_groups.people:
+ucb_admin_menus.content_groups.people:
   path: '/node/add/group/people'
   defaults:
     _title: 'Add content: People'
-    _controller: 'Drupal\ucb_custom_menus\Controller\OverviewController::singleMenuOverview'
+    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
   requirements:
     _entity_create_any_access: 'node'
   options:

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ucb_custom_menus\Controller;
+namespace Drupal\ucb_admin_menus\Controller;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Controller\ControllerBase;

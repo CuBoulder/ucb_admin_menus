@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ucb_custom_menus;
+namespace Drupal\ucb_admin_menus;
 
 use Drupal\Component\Plugin\Exception\PluginException;
 use Drupal\Core\Breadcrumb\Breadcrumb;

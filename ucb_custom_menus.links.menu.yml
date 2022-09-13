@@ -19,12 +19,18 @@ ucb_custom_menus.content_groups.news_and_articles:
   route_name: ucb_custom_menus.content_groups.news_and_articles
   parent: 'admin_toolbar_tools.extra_links:node.add'
   weight: 1
+ucb_custom_menus.content_groups.forms:
+  title: 'Forms'
+  description: ''
+  route_name: ucb_custom_menus.content_groups.forms
+  parent: 'admin_toolbar_tools.extra_links:node.add'
+  weight: 2
 ucb_custom_menus.content_groups.people:
   title: 'People'
   description: ''
   route_name: ucb_custom_menus.content_groups.people
   parent: 'admin_toolbar_tools.extra_links:node.add'
-  weight: 2
+  weight: 3
 
 # --- General ---
 'admin_toolbar_tools.extra_links:node.add.basic_page':
@@ -45,6 +51,12 @@ ucb_custom_menus.content_groups.people:
   class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_custom_menus.content_groups.news_and_articles
   weight: 1
+
+# --- Forms ---
+'admin_toolbar_tools.extra_links:node.add.form_page':
+  class: 'Drupal\ucb_custom_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_custom_menus.content_groups.forms
+  weight: 0
 
 # --- People ---
 'admin_toolbar_tools.extra_links:node.add.ucb_person':

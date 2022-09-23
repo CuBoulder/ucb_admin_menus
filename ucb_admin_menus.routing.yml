@@ -14,6 +14,7 @@ ucb_admin_menus.content_groups.general:
   defaults:
     _title: 'Add content: General'
     _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
+    link_id: 'ucb_admin_menus.content_groups.general'
   requirements:
     _entity_create_any_access: 'node'
   options:
@@ -24,6 +25,7 @@ ucb_admin_menus.content_groups.news_and_articles:
   defaults:
     _title: 'Add content: News and Articles'
     _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
+    link_id: 'ucb_admin_menus.content_groups.news_and_articles'
   requirements:
     _entity_create_any_access: 'node'
   options:
@@ -34,6 +36,7 @@ ucb_admin_menus.content_groups.forms:
   defaults:
     _title: 'Add content: Forms'
     _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
+    link_id: 'ucb_admin_menus.content_groups.forms'
   requirements:
     _entity_create_any_access: 'node'
   options:
@@ -44,6 +47,7 @@ ucb_admin_menus.content_groups.people:
   defaults:
     _title: 'Add content: People'
     _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
+    link_id: 'ucb_admin_menus.content_groups.people'
   requirements:
     _entity_create_any_access: 'node'
   options:

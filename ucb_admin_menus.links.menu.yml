@@ -1,69 +1,67 @@
 # --- Top-level menus ---
-'admin_toolbar_tools.extra_links:node.add':
+ucb_admin_menus.node.add:
   title: 'Add content'
   description: ''
   route_name: node.add_page
-  parent: system.admin_content
-  weight: 0
 
 
 ucb_admin_menus.content_groups.general:
   title: 'General'
   description: ''
   route_name: ucb_admin_menus.content_groups.general
-  parent: 'admin_toolbar_tools.extra_links:node.add'
+  parent: 'ucb_admin_menus.node.add'
   weight: 0
 ucb_admin_menus.content_groups.news_and_articles:
   title: 'News and Articles'
   description: ''
   route_name: ucb_admin_menus.content_groups.news_and_articles
-  parent: 'admin_toolbar_tools.extra_links:node.add'
+  parent: 'ucb_admin_menus.node.add'
   weight: 1
 ucb_admin_menus.content_groups.forms:
   title: 'Forms'
   description: ''
   route_name: ucb_admin_menus.content_groups.forms
-  parent: 'admin_toolbar_tools.extra_links:node.add'
+  parent: 'ucb_admin_menus.node.add'
   weight: 2
 ucb_admin_menus.content_groups.people:
   title: 'People'
   description: ''
   route_name: ucb_admin_menus.content_groups.people
-  parent: 'admin_toolbar_tools.extra_links:node.add'
+  parent: 'ucb_admin_menus.node.add'
   weight: 3
 
 # --- General ---
-'admin_toolbar_tools.extra_links:node.add.basic_page':
+ucb_admin_menus.node.add.basic_page:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.general
   weight: 0
-'admin_toolbar_tools.extra_links:node.add.how_to_page':
+ucb_admin_menus.node.add.how_to_page:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.general
   weight: 1
 
 # --- News and Articles ---
-'admin_toolbar_tools.extra_links:node.add.ucb_article':
+ucb_admin_menus.node.add.ucb_article:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.news_and_articles
   weight: 0
-'admin_toolbar_tools.extra_links:node.add.ucb_article_list':
+ucb_admin_menus.node.add.ucb_article_list:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.news_and_articles
   weight: 1
 
 # --- Forms ---
-'admin_toolbar_tools.extra_links:node.add.form_page':
+ucb_admin_menus.node.add.form_page:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.forms
   weight: 0
 
 # --- People ---
-'admin_toolbar_tools.extra_links:node.add.ucb_person':
+ucb_admin_menus.node.add.ucb_person:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.people
   weight: 0
-'admin_toolbar_tools.extra_links:node.add.ucb_people_list_page':
+ucb_admin_menus.node.add.ucb_people_list_page:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.people
   weight: 1

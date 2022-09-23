@@ -34,7 +34,7 @@ class NodeTypeMenuLink extends MenuLinkDefault {
 		parent::__construct($configuration, $plugin_id, $plugin_definition, $static_override);
 		// Gets the node type id from the menu link id
 		$menuLinkId = $this->pluginDefinition['id'];
-		$nodeTypeId = substr($menuLinkId, strripos($menuLinkId, ':node.add.') + 10);
+		$nodeTypeId = substr($menuLinkId, strripos($menuLinkId, '.node.add.') + 10);
 		// Loads the node type from the node type storage (falls back to basic page if it doesn't exist to avoid breaking the site)
 		$this->nodeType = $entityStorage->load($nodeTypeId) ?? $entityStorage->load('basic_page');
 	}

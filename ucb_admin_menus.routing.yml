@@ -3,7 +3,7 @@ node.add_page:
   defaults:
     _title: 'Add content'
     _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::multiMenuOverview'
-    link_id: 'admin_toolbar_tools.extra_links:node.add'
+    link_id: 'ucb_admin_menus.node.add'
   requirements:
     _entity_create_any_access: 'node'
   options:

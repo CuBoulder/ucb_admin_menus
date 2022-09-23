@@ -52,7 +52,7 @@ class NodeTypeBreadcrumbBuilder implements BreadcrumbBuilderInterface {
 		try {
 			// Adds the parent link from this module's overview pages
 			/** @var \Drupal\Core\Menu\MenuLinkInterface $link */
-			$link = $this->menuLinkManager->createInstance('admin_toolbar_tools.extra_links:node.add.' . $nodeType->id());
+			$link = $this->menuLinkManager->createInstance('ucb_admin_menus.node.add.' . $nodeType->id());
 			$parentId = $link->getParent();
 			if($parentId) {
 				/** @var \Drupal\Core\Menu\MenuLinkInterface $parentLink */

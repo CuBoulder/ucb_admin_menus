@@ -49,6 +49,10 @@ ucb_admin_menus.node.add.ucb_article_list:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.news_and_articles
   weight: 1
+ucb_admin_menus.node.add.newsletter:
+  class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_admin_menus.content_groups.news_and_articles
+  weight: 1
 
 # --- Forms ---
 ucb_admin_menus.node.add.form_page:

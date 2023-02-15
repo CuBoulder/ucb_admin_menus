@@ -6,6 +6,5 @@ dependencies:
   - admin_toolbar_tools
   - help # this module has routes that override those in help
   - node
-  - system
-version: '1.1'
+version: '1.1.1'
 package: CU Boulder

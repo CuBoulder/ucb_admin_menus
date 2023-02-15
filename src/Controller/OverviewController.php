@@ -7,9 +7,11 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Menu\MenuActiveTrailInterface;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class OverviewController extends ControllerBase {
+	use StringTranslationTrait;
 
 	/**
 	 * The menu link tree service.
@@ -67,6 +69,7 @@ class OverviewController extends ControllerBase {
 			['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
 		];
 		$tree = $this->menuLinkTree->transform($tree, $manipulators);
+		$content = [];
 		foreach ($tree as $key => $element) {
 			// Only render accessible links.
 			if (!$element->access->isAllowed()) {
@@ -92,7 +95,7 @@ class OverviewController extends ControllerBase {
 				'#content' => $content,
 			];
 		} else return [
-			'#markup' => t('There are no content types to add.'),
+			'#markup' => $this->t('There are no items that you have access to.'),
 		];
 	}
 
@@ -146,7 +149,7 @@ class OverviewController extends ControllerBase {
 			return $build;
 		} else {
 			$build = [
-				'#markup' => $this->t('There are no content types to add.'),
+				'#markup' => $this->t('There are no items that you have access to.'),
 			];
 			$tree_access_cacheability->applyTo($build);
 			return $build;

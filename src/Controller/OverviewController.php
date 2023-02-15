@@ -7,17 +7,9 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Menu\MenuActiveTrailInterface;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
-use Drupal\system\SystemManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class OverviewController extends ControllerBase {
-
-	/**
-	 * System manager service.
-	 *
-	 * @var \Drupal\system\SystemManager
-	 */
-	protected $systemManager;
 
 	/**
 	 * The menu link tree service.
@@ -36,15 +28,12 @@ class OverviewController extends ControllerBase {
 	/**
 	 * Constructs a new OverviewController.
 	 *
-	 * @param \Drupal\system\SystemManager $systemManager
-	 *   System manager service.
 	 * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menuLinkTree
 	 *   The menu link tree service.
 	 * @param \Drupal\Core\Menu\MenuActiveTrailInterface $menuActiveTrail
      *   The active menu trail service.
 	 */
-	public function __construct(SystemManager $systemManager, MenuLinkTreeInterface $menuLinkTree, MenuActiveTrailInterface $menuActiveTrail) {
-		$this->systemManager = $systemManager;
+	public function __construct(MenuLinkTreeInterface $menuLinkTree, MenuActiveTrailInterface $menuActiveTrail) {
 		$this->menuLinkTree = $menuLinkTree;
 		$this->menuActiveTrail = $menuActiveTrail;
 	}
@@ -54,7 +43,6 @@ class OverviewController extends ControllerBase {
 	 */
 	public static function create(ContainerInterface $container) {
 		return new static(
-			$container->get('system.manager'),
 			$container->get('menu.link_tree'),
 			$container->get('menu.active_trail')
 		);
@@ -90,18 +78,20 @@ class OverviewController extends ControllerBase {
 		
 			/** @var \Drupal\Core\Menu\MenuLinkInterface $link */
 			$link = $element->link;
+			// Removes items that a user doesn't have access to
+			if(!$link->getUrlObject()->access()) continue;
 			$content[$key]['title'] = $link->getTitle();
 			$content[$key]['options'] = $link->getOptions();
 			$content[$key]['description'] = $link->getDescription();
 			$content[$key]['url'] = $link->getUrlObject();
 		}
-		ksort($content);
-		if($content)
+		if($content) {
+			ksort($content);
 			return [
 				'#theme' => 'admin_block_content',
 				'#content' => $content,
 			];
-		else return [
+		} else return [
 			'#markup' => t('There are no content types to add.'),
 		];
 	}
@@ -139,10 +129,7 @@ class OverviewController extends ControllerBase {
 			$link = $element->link;
 			$block['title'] = $link->getTitle();
 			$block['description'] = $link->getDescription();
-			$block['content'] = [
-				'#theme' => 'admin_block_content',
-				'#content' => $this->systemManager->getAdminBlock($link),
-			];
+			$block['content'] = $this->singleMenuOverview($link->getPluginId());
 		
 			if (!empty($block['content']['#content'])) {
 				$blocks[$key] = $block;

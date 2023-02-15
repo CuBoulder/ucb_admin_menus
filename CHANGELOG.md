@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Adds the Admin Helpscout Beacon and help page redirects
+  - Admin Helpscout Beacon and help page redirects moved to ucb_admin_menus (resolves CuBoulder/ucb_admin_menus#2).
+  - Now indicates D10 compatibility.
+  
+  Sister PR in: [ucb_site_configuration](https://github.com/CuBoulder/ucb_site_configuration/pull/17)
+---
+
 - ### Adds `CHANGELOG.md` and workflow
   Resolves CuBoulder/ucb_admin_menus#3
 ---

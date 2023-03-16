@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Adds stylistic modifications to the secondary administration toolbar
+  This update:
+  - Modifies the "Edit" button on the secondary administration toolbar to actually look like a button
+  - Changes the background of the secondary administration toolbar to the off-white of administration pages, increasing noticeability of the toolbar
+  
+  Resolves CuBoulder/tiamat-theme#282; Author @TeddyBearX 
+---
+
 - ### Fixes malformed `core_version_requirement` causing Drupal 10 incompatibility
   Resolves CuBoulder/ucb_admin_menus#7
 ---

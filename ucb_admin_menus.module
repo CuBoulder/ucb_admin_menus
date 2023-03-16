@@ -24,5 +24,6 @@ function ucb_admin_menus_page_attachments_alter(array &$page) {
 				'site_url' => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . \Drupal::request()->getRequestUri()
 			]
 		];
+		$page['#attached']['library'][] = 'ucb_admin_menus/admin_toolbar_enhancer';
 	}
 }

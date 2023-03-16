@@ -7,3 +7,9 @@ admin_helpscout_beacon:
       css/admin-helpscout-beacon.css: {}
   dependencies:
     - core/drupalSettings
+
+admin_toolbar_enhancer:
+  version: 1.0
+  css:
+    theme:
+      css/admin-toolbar-enhancer.css: {}

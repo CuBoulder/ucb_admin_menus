@@ -1,0 +1,63 @@
+/*
+ * Contains styles for the Gin admin toolbars.
+ */
+
+.gin-secondary-toolbar.gin-secondary-toolbar--frontend {
+	background: var(--gin-bg-app);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__link.gin-back-to-admin, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:link, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:visited {
+	color: var(--gin-color-primary);
+	padding: var(--gin-spacing-xs) var(--gin-spacing-m);
+	border-radius: var(--gin-border-s);
+	border: 2px solid var(--gin-color-primary);
+	box-shadow: 0 1px 2px var(--gin-color-primary-light);
+	transition: var(--gin-transition);
+	font-size: 0.79rem;
+	font-weight: var(--gin-font-weight-semibold);
+	padding-left: calc(var(--gin-spacing-m) + 1.185rem);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:hover, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:active, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:focus {
+	color: var(--gin-color-button-text);
+	background-color: var(--gin-color-primary-hover);
+	border-color: var(--gin-color-primary-hover);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:active {
+	background-color: var(--gin-color-primary-active);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:focus {
+	background-color: var(--gin-color-primary-active);
+	border-color: var(--gin-color-focus-border);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin .placeholder, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:link .placeholder, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:visited .placeholder {
+	color: var(--gin-color-primary);
+	font-weight: var(--gin-font-weight-semibold);
+	transition: var(--gin-transition);
+	cursor: pointer;
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:hover .placeholder, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:active .placeholder, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:focus .placeholder {
+	color: var(--gin-color-button-text);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin::before {
+	background-color: var(--gin-color-primary);
+	mask-image: url('../../../../themes/contrib/gin/dist/media/sprite.svg#media-edit-view');
+	-webkit-mask-image: url('../../../../themes/contrib/gin/dist/media/sprite.svg#media-edit-view');
+	width: 0.79rem;
+	height: 0.79rem;
+	margin-left: var(--gin-spacing-m);
+	transition: var(--gin-transition);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:hover::before, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:active::before, .gin-secondary-toolbar .gin-breadcrumb__item .gin-breadcrumb__link.gin-back-to-admin:focus::before {
+	background-color: var(--gin-color-button-text);
+}
+
+.gin-secondary-toolbar .gin-breadcrumb__list {
+	overflow: visible;
+}

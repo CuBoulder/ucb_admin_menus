@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Fixes malformed `core_version_requirement` causing Drupal 10 incompatibility
+  Resolves CuBoulder/ucb_admin_menus#7
+---
+
 - ### Hides administration items that a user doesn't have access to
   This update includes these changes across several repos:
   - Hides inaccessible items from the Admin Toolbar by installing Admin Toolbar Links Access Filter

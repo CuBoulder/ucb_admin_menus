@@ -61,3 +61,10 @@
 .gin-secondary-toolbar .gin-breadcrumb__list {
 	overflow: visible;
 }
+
+a.gin-breadcrumb__link {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}

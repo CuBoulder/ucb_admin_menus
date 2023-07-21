@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Modifies the help text under link URI fields in the admin content editor interface
+  The help text under all link URI fields in the admin content editor interface has been updated to address concerns with the default help text causing confusion among users.
+  
+  Resolves CuBoulder/tiamat-theme#406
+  
+  Resolves CuBoulder/tiamat-theme#308 (last remaining work item)
+---
+
 - ### Adds stylistic modifications to the secondary administration toolbar
   This update:
   - Modifies the "Edit" button on the secondary administration toolbar to actually look like a button

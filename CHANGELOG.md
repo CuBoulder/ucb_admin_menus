@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Adds "Issue" and "Issue Archive" to "Add content" page
+  Resolves CuBoulder/ucb_admin_menus#10
+---
+
 - ### Modifies the help text under link URI fields in the admin content editor interface
   The help text under all link URI fields in the admin content editor interface has been updated to address concerns with the default help text causing confusion among users.
   

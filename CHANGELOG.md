@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Completes in-content menu blocks
+  Removes extra "HTML and style options" added by [Menu Block](https://www.drupal.org/project/menu_block).
+  
+  Sister PR in: [tiamat-theme](https://github.com/CuBoulder/tiamat-theme/pull/552), [tiamat10-project-template](https://github.com/CuBoulder/tiamat10-project-template/pull/25), [tiamat10-profile](https://github.com/CuBoulder/tiamat10-profile/pull/50)
+  
+  CuBoulder/tiamat-theme#267
+  CuBoulder/tiamat-theme#528
+---
+
 - ### Adds "Issue" and "Issue Archive" to "Add content" page
   Resolves CuBoulder/ucb_admin_menus#10
 ---

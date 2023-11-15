@@ -1,5 +1,7 @@
 <?php
 
+use \Drupal\Core\Form\FormStateInterface;
+
 /**
  * Adds the Helpscout Beacon widget if the user has permission to see the admin toolbar.
  * Implements hook_page_attachments_alter().
@@ -32,7 +34,7 @@ function ucb_admin_menus_page_attachments_alter(array &$page) {
  * [CuBoulder/tiamat-theme#406](https://github.com/CuBoulder/tiamat-theme/issues/406) – Modifies the help text under link URI fields.
  * Implements hook_field_widget_single_element_form_alter().
  */
-function ucb_admin_menus_field_widget_single_element_form_alter(array &$element, \Drupal\Core\Form\FormStateInterface $form_state, array $context) {
+function ucb_admin_menus_field_widget_single_element_form_alter(array &$element, FormStateInterface $form_state, array $context) {
 	$field_definition = $context['items']->getFieldDefinition();
 	if ($field_definition->getType() == 'link') {
 		$element['uri']['#description'] = t(
@@ -44,4 +46,16 @@ function ucb_admin_menus_field_widget_single_element_form_alter(array &$element,
 			]
 		);
 	}
+}
+
+/**
+ * Removes extra "HTML and style options" from menu blocks.
+ *
+ * Introduced in version 1.1.3 to address CuBoulder/tiamat-theme#267.
+ * Implements hook_form_alter().
+ */
+function ucb_admin_menus_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'block_form' && isset($form['settings']['provider']['#value']) && $form['settings']['provider']['#value'] == 'menu_block' && isset($form['settings']['style'])) {
+    $form['settings']['style']['#access'] = FALSE;
+  }
 }

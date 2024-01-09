@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
- * Redirects an anonmyous user accessing an admin/restricted page to login.
+ * Redirects an anonymous user accessing an admin/restricted page to login.
  */
 class Redirect403 implements HttpKernelInterface {
   /**

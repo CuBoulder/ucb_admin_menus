@@ -6,3 +6,10 @@ services:
       -
         name: breadcrumb_builder
         priority: 1010
+  http_middleware.ucb_admin_menus_redirect_403:
+    class: 'Drupal\ucb_admin_menus\Middleware\Redirect403'
+    arguments: ['@current_user']
+    tags:
+      -
+        name: http_middleware
+        priority: 30

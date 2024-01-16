@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### CU Boulder Admin Menus v1.2
+  This update adds site-wide 403 page redirection, to redirect an anonymous user trying to access an administration or restricted page to the user login page. Resolves CuBoulder/ucb_admin_menus#14
+---
+
 - ### Completes in-content menu blocks
   Removes extra "HTML and style options" added by [Menu Block](https://www.drupal.org/project/menu_block).
   

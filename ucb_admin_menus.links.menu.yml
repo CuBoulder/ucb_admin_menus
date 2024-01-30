@@ -40,6 +40,11 @@ ucb_admin_menus.node.add.how_to_page:
   parent: ucb_admin_menus.content_groups.general
   weight: 1
 
+ucb_admin_menus.node.add.ucb_faq_page:
+  class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_admin_menus.content_groups.general
+  weight: 2
+
 # --- News and Articles ---
 ucb_admin_menus.node.add.ucb_article:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'

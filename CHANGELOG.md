@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Adds FAQ Page to Menus
+  Adds the FAQ Content Type. Resolves https://github.com/CuBoulder/tiamat-theme/issues/620
+  
+  Includes:
+  - tiamat-theme (issue/tiamat-theme/620) => https://github.com/CuBoulder/tiamat-theme/pull/641
+  - custom-entities (issue/tiamat-theme/620) => https://github.com/CuBoulder/tiamat-custom-entities/pull/92
+  - ucb-admin-menus (issue/tiamat-theme/620) => https://github.com/CuBoulder/ucb_admin_menus/pull/20
+---
+
 - ### Makes Admin Helpscout Beacon compatible with the Claro admin toolbar
   Resolves CuBoulder/ucb_admin_menus#17
 ---

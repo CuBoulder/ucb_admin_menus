@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Update admin menu for collection item pages
+  Helps close https://github.com/CuBoulder/tiamat-theme/issues/534.
+  Adds menu link for collection item pages.
+---
+
 - ### Adds FAQ Page to Menus
   Adds the FAQ Content Type. Resolves https://github.com/CuBoulder/tiamat-theme/issues/620
   

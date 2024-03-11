@@ -29,6 +29,12 @@ ucb_admin_menus.content_groups.people:
   route_name: ucb_admin_menus.content_groups.people
   parent: 'ucb_admin_menus.node.add'
   weight: 3
+ucb_admin_menus.content_groups.alumni_class_notes:
+  title: 'Alumni Class Notes'
+  description: ''
+  route_name: ucb_admin_menus.content_groups.alumni_class_notes
+  parent: 'ucb_admin_menus.node.add'
+  weight: 4
 
 # --- General ---
 ucb_admin_menus.node.add.basic_page:
@@ -86,4 +92,14 @@ ucb_admin_menus.node.add.ucb_person:
 ucb_admin_menus.node.add.ucb_people_list_page:
   class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
   parent: ucb_admin_menus.content_groups.people
+  weight: 1
+
+# --- Alumni Class Notes ---
+ucb_admin_menus.node.add.ucb_class_notes:
+  class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_admin_menus.content_groups.alumni_class_notes
+  weight: 0
+ucb_admin_menus.node.add.ucb_class_notes_list_page:
+  class: 'Drupal\ucb_admin_menus\Plugin\Menu\NodeTypeMenuLink'
+  parent: ucb_admin_menus.content_groups.alumni_class_notes
   weight: 1

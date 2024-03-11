@@ -53,6 +53,17 @@ ucb_admin_menus.content_groups.people:
   options:
     _admin_route: true
 
+ucb_admin_menus.content_groups.alumni_class_notes:
+  path: '/node/add/group/alumni'
+  defaults:
+    _title: 'Add content: Alumni Class Notes'
+    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::singleMenuOverview'
+    link_id: 'ucb_admin_menus.content_groups.alumni_class_notes'
+  requirements:
+    _entity_create_any_access: 'node'
+  options:
+    _admin_route: true
+
 help.main:
   path: /admin/help
   defaults:

@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Styles 'Preview' Toolbar
+  Adjusts and styles top Preview toolbar. Also removes old Gin CSS. 
+  
+  Resolves #23 
+---
+
 - ### Adds Alumni Class Notes to Node/Add
   Resolves #24 
 ---

@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Removes broken how-to page link in add content page (v1.2.1)
+  [Remove] Removes broken how-to page link in add content page. CuBoulder/tiamat-custom-entities#129; Resolves CuBoulder/ucb_admin_menus#27
+---
+
 - ### Styles 'Preview' Toolbar
   Adjusts and styles top Preview toolbar. Also removes old Gin CSS. 
   

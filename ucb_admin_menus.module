@@ -1,57 +1,67 @@
 <?php
 
-use \Drupal\Core\Form\FormStateInterface;
+/**
+ * @file
+ * Contains functional hooks used by the CU Boulder Admin Menus module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Adds the Helpscout Beacon widget if the user has permission to see the admin toolbar.
+ * Adds the Helpscout Beacon widget into the admin toolbar.
+ *
  * Implements hook_page_attachments_alter().
  */
 function ucb_admin_menus_page_attachments_alter(array &$page) {
-	$user = \Drupal::currentUser();
-	if ($user->hasPermission('access toolbar')) {
-		$configuration = \Drupal::config('ucb_admin_menus.configuration');
-		$roles = join(', ', $user->getRoles());
-  		$site_name = \Drupal::config('system.site')->get('name');
-		$site_name = str_replace(' ', '-', $site_name);
-		$site_name = preg_replace('/[^A-Za-z0-9\-]/', '', $site_name);
-		$page['#attached']['library'][] = 'ucb_admin_menus/admin_helpscout_beacon';
-		$page['#attached']['drupalSettings']['admin_helpscout_beacon'] = [
-			'id' => $configuration->get('admin_helpscout_beacon_id'),
-			'prefill' => [
-				'name' => $user->getDisplayName(),
-				'email' => $user->getEmail(),
-				'user_email' => $user->getEmail(),
-				'roles' => $roles,
-				'site_name' => $site_name,
-				'site_url' => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . \Drupal::request()->getRequestUri()
-			]
-		];
-		$page['#attached']['library'][] = 'ucb_admin_menus/admin_toolbar_enhancer';
-	}
+  $user = \Drupal::currentUser();
+  if ($user->hasPermission('access toolbar')) {
+    $configuration = \Drupal::config('ucb_admin_menus.configuration');
+    $roles = implode(', ', $user->getRoles());
+    $site_name = \Drupal::config('system.site')->get('name');
+    $site_name = str_replace(' ', '-', $site_name);
+    $site_name = preg_replace('/[^A-Za-z0-9\-]/', '', $site_name);
+    $page['#attached']['library'][] = 'ucb_admin_menus/admin_helpscout_beacon';
+    $page['#attached']['drupalSettings']['admin_helpscout_beacon'] = [
+      'id' => $configuration->get('admin_helpscout_beacon_id'),
+      'prefill' => [
+        'name' => $user->getDisplayName(),
+        'email' => $user->getEmail(),
+        'user_email' => $user->getEmail(),
+        'roles' => $roles,
+        'site_name' => $site_name,
+        'site_url' => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . \Drupal::request()->getRequestUri(),
+      ],
+    ];
+    $page['#attached']['library'][] = 'ucb_admin_menus/admin_toolbar_enhancer';
+  }
 }
 
 /**
- * [CuBoulder/tiamat-theme#406](https://github.com/CuBoulder/tiamat-theme/issues/406) – Modifies the help text under link URI fields.
+ * Modifies the help text under link URI fields.
+ *
+ * Introduced to address [CuBoulder/tiamat-theme#406](https://github.com/CuBoulder/tiamat-theme/issues/406).
+ *
  * Implements hook_field_widget_single_element_form_alter().
  */
 function ucb_admin_menus_field_widget_single_element_form_alter(array &$element, FormStateInterface $form_state, array $context) {
-	$field_definition = $context['items']->getFieldDefinition();
-	if ($field_definition->getType() == 'link') {
-		$element['uri']['#description'] = t(
-			'Start typing the title of a piece of content to select it. You can also enter an internal path such as %intpath or an external URL such as %exturl. Enter %frontpath to link to the front page.',
-			[
-				'%intpath' => '/about',
-				'%exturl' => 'https://www.colorado.edu',
-				'%frontpath' => '<front>'
-			]
-		);
-	}
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getType() == 'link') {
+    $element['uri']['#description'] = t(
+      'Start typing the title of a piece of content to select it. You can also enter an internal path such as %intpath or an external URL such as %exturl. Enter %frontpath to link to the front page.',
+      [
+        '%intpath' => '/about',
+        '%exturl' => 'https://www.colorado.edu',
+        '%frontpath' => '<front>',
+      ]
+    );
+  }
 }
 
 /**
  * Removes extra "HTML and style options" from menu blocks.
  *
- * Introduced in version 1.1.3 to address CuBoulder/tiamat-theme#267.
+ * Introduced in version 1.1.3 to address [CuBoulder/tiamat-theme#267](https://github.com/CuBoulder/tiamat-theme/issues/267).
+ *
  * Implements hook_form_alter().
  */
 function ucb_admin_menus_form_alter(&$form, FormStateInterface $form_state, $form_id) {

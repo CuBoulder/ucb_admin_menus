@@ -20,21 +20,21 @@ class LogoutController extends ControllerBase {
    *
    * @var \Drupal\Core\Session\SessionManagerInterface
    */
-  private $session;
+  protected $session;
 
   /**
    * The current user.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
-  private $user;
+  protected $user;
 
   /**
    * The logger.
    *
    * @var \Psr\Log\LoggerInterface
    */
-  private $logger;
+  protected $logger;
 
   /**
    * Constructs a new LogoutController.
@@ -70,20 +70,21 @@ class LogoutController extends ControllerBase {
    *   A redirect response.
    */
   public function logoutRedirect() {
-    if ($this->user->isAuthenticated()) {
+    $user = $this->user;
+    if ($user->isAuthenticated()) {
       // @see core/modules/user/user.module user_logout
       $this->logger->info('Session closed for %name.', [
-        '%name' => $this->user->getAccountName(),
+        '%name' => $user->getAccountName(),
       ]);
-      $this->moduleHandler()->invokeAllWith('user_logout', function (callable $hook, string $module) {
+      $this->moduleHandler()->invokeAllWith('user_logout', function (callable $hook, string $module) use ($user) {
         // Stops simpleSAMLphp Authentication from redirecting logouts to a
         // FedAuth error page.
         if ($module != 'simplesamlphp_auth') {
-          call_user_func($hook, $this->user);
+          call_user_func($hook, $user);
         }
       });
       $this->session->destroy();
-      $this->user->setAccount(new AnonymousUserSession());
+      $user->setAccount(new AnonymousUserSession());
     }
     return new TrustedRedirectResponse(base_path());
   }

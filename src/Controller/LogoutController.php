@@ -11,7 +11,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Controller for the Drupal logout route.
+ * Provides a controller for the Drupal logout route.
  */
 class LogoutController extends ControllerBase {
 
@@ -65,6 +65,13 @@ class LogoutController extends ControllerBase {
 
   /**
    * Redirects the Drupal logout route to the site homepage.
+   *
+   * The user's current session is destroyed and a redirect to the site
+   * homepage is returned. All module `user_logout` hooks are called with one
+   * notable exception: simpleSAMLphp Authentication. This module was
+   * redirecting the user to a FedAuth error page instead of actually logging
+   * them out. See
+   * [issue #29](https://github.com/CuBoulder/ucb_admin_menus/issues/29).
    *
    * @return \Drupal\Core\Routing\TrustedRedirectResponse
    *   A redirect response.

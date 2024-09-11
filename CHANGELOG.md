@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Updates the Admin Helpscout Beacon Id
+  [change] Updates the Admin Helpscout Beacon Id to resolve to the new documentation. Resolves CuBoulder/ucb_admin_menus#32 
+---
+
 - ### Initial solution to hiding "Clear Related Data"
   Closes https://github.com/CuBoulder/ucb_admin_menus/issues/34.
   Adds a hook to remove the "Clear Related Button" in the main menu settings page.

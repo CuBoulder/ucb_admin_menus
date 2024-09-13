@@ -1,6 +1,6 @@
 {
-	"name": "cu-boulder/ucb_admin_menus",
-	"description": "Provides custom admin menus for CU Boulder sites.",
-	"license": "GPL-2.0-or-later",
-	"type": "drupal-custom-module"
+    "name": "cu-boulder/ucb_admin_menus",
+    "description": "Provides custom admin menus for CU Boulder sites.",
+    "license": "GPL-2.0-or-later",
+    "type": "drupal-custom-module"
 }

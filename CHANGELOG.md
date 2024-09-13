@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Adds logout route override and updates route overrride handling (1.3.0)
+  This update:
+  - [Bug] Overrides the logout route to remove the simpleSAMLphp Authentication redirect and instead redirect the user to the homepage of the site after destroying the session. **This will need to be tested in the sandboxes to make sure it works properly since I have no way to test on a local development instance.** Resolves CuBoulder/ucb_admin_menus#29
+  - [Change] Adds a RouteSubscriber which is actually the proper way to override routes that already exist from Drupal or other modules. In addition to logout, this also affects the help and add content route overrides.
+  - [Change] Cleans up project files in accordance with Drupal coding standards (PHP CodeSniffer validation).
+  - [Change] Updates Admin Helpscout Beacon id to link to the new Drupal 10 documentation. Resolves CuBoulder/ucb_admin_menus#32
+---
+
 - ### Updates the Admin Helpscout Beacon Id
   [change] Updates the Admin Helpscout Beacon Id to resolve to the new documentation. Resolves CuBoulder/ucb_admin_menus#32 
 ---

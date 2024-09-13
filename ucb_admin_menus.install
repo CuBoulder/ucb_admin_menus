@@ -1,9 +1,16 @@
 <?php
 
 /**
- * v1.1 – Admin Helpscout Beacon moved to ucb_admin_menus (CuBoulder/ucb_admin_menus#2).
+ * @file
+ * Contains update hooks used by the CU Boulder Admin Menus module.
  */
-function ucb_admin_menus_update_9501() {
-	$config = \Drupal::configFactory()->getEditable('ucb_admin_menus.configuration');
-	$config->set('admin_helpscout_beacon_id', '1bb01225-0287-4443-a7e5-be8f375a7766')->save();
+
+/**
+ * Updates Admin Helpscout Beacon id.
+ *
+ * Introduced in version 1.3.0 to address CuBoulder/ucb_admin_menus#32.
+ */
+function ucb_admin_menus_update_9502() {
+  $config = \Drupal::configFactory()->getEditable('ucb_admin_menus.configuration');
+  $config->set('admin_helpscout_beacon_id', '7aeb6f1c-247c-4a83-b44f-4cee2784bb63')->save();
 }

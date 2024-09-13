@@ -1,41 +1,42 @@
 /* Preview View Mode Menu */
 div.node-preview-container.container-inline {
-    display: block;
-    position: inherit;
+  display: block;
+  position: inherit;
 }
+
 /* Back to Editing Button */
-.node-preview-backlink{
-	margin-left: 10px;
+.node-preview-backlink {
+  margin-left: 10px;
 }
 
 .node-preview-backlink::before {
-    content: '\f053  ' !important;
-    font-weight: 900 !important;
-    font-family: "Font Awesome 6 Free - Solid" ;
-    color: #0277bd;
+  content: '\f053  ' !important;
+  font-weight: 900 !important;
+  font-family: "Font Awesome 6 Free - Solid";
+  color: #0277bd;
 }
 
 .node-preview-backlink:hover::before {
-	color: #b71c1c !important;
+  color: #b71c1c !important;
 }
 
 /* Dropdown */
-#edit-view-mode{
-	min-width: 150px;
+#edit-view-mode {
+  min-width: 150px;
 }
 
 /* Mobile */
 @media (max-width: 575px) {
-	.node-preview-form-select{
-		display: flex;
-		flex-direction: column;
-	}
-	
-	.node-preview-form-select > * {
-		padding: 10px 0px;
-	}
-
-	.node-preview-backlink{
-		align-self: center;
-	}
+  .node-preview-form-select {
+    display: flex;
+    flex-direction: column;
   }
+
+  .node-preview-form-select > * {
+    padding: 10px 0px;
+  }
+
+  .node-preview-backlink {
+    align-self: center;
+  }
+}

@@ -1,14 +1,3 @@
-node.add_page:
-  path: '/node/add'
-  defaults:
-    _title: 'Add content'
-    _controller: 'Drupal\ucb_admin_menus\Controller\OverviewController::multiMenuOverview'
-    link_id: 'ucb_admin_menus.node.add'
-  requirements:
-    _entity_create_any_access: 'node'
-  options:
-    _node_operation_route: true
-
 ucb_admin_menus.content_groups.general:
   path: '/node/add/group/general'
   defaults:
@@ -63,19 +52,3 @@ ucb_admin_menus.content_groups.alumni_class_notes:
     _entity_create_any_access: 'node'
   options:
     _admin_route: true
-
-help.main:
-  path: /admin/help
-  defaults:
-    _controller: 'Drupal\ucb_admin_menus\Controller\HelpController::helpRedirect'
-    _title: 'Help'
-  requirements:
-    _permission: access administration pages
-
-help.page:
-  path: '/admin/help/{name}'
-  defaults:
-    _controller: 'Drupal\ucb_admin_menus\Controller\HelpController::helpRedirect'
-    _title: 'Help'
-  requirements:
-    _permission: access administration pages

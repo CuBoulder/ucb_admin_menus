@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Create developer-sandbox-ci.yml
+  new ci workflow
+---
+
 - ### Adds logout route override and updates route overrride handling (1.3.0)
   This update:
   - [Bug] Overrides the logout route to remove the simpleSAMLphp Authentication redirect and instead redirect the user to the homepage of the site after destroying the session. **This will need to be tested in the sandboxes to make sure it works properly since I have no way to test on a local development instance.** Resolves CuBoulder/ucb_admin_menus#29

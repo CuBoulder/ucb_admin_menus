@@ -17,7 +17,7 @@ class HelpController extends ControllerBase {
    *   A redirect response.
    */
   public function helpRedirect() {
-    return new TrustedRedirectResponse('https://websupport.colorado.edu/');
+    return new TrustedRedirectResponse('https://webexpress.colorado.edu/');
   }
 
 }

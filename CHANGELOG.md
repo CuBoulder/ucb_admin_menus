@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Corrects help redirect (v1.3.1)
+  This update corrects the `/admin/help` redirect to the [Drupal 10 documentation](https://webexpress.colorado.edu/).
+  
+  [change] Resolves CuBoulder/ucb_admin_menus#38
+---
+
 - ### Updates linter workflow
   Updates the linter workflow to use the new parent workflow in action-collection.
   

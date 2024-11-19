@@ -71,11 +71,11 @@ function ucb_admin_menus_form_alter(&$form, FormStateInterface $form_state, $for
 }
 
 /**
-* Implements ucb_admin_menus_form_menu_edit_form_alter().
-*
-* Removes the 'Clear Related Data' button from the main menu navigation settings page
-*/
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Removes the 'Clear Related Data' button from the main menu navigation
+ * settings page.
+ */
 function ucb_admin_menus_form_menu_edit_form_alter(array &$form, FormStateInterface $form_state) {
-    $form['actions']['clear'] = [
-    ];
-  }
+  unset($form['actions']['clear']);
+}

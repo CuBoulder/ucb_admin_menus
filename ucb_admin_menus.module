@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Adds the Helpscout Beacon widget into the admin toolbar.
@@ -78,4 +79,39 @@ function ucb_admin_menus_form_alter(&$form, FormStateInterface $form_state, $for
  */
 function ucb_admin_menus_form_menu_edit_form_alter(array &$form, FormStateInterface $form_state) {
   unset($form['actions']['clear']);
+}
+
+/**
+ * Implements hook_node_predelete().
+ *
+ * Prevents the node set as the omepage from being deleted
+ */
+function ucb_admin_menus_node_predelete(NodeInterface $node) {
+  // Get the front page path
+  $front_page_path = \Drupal::config('system.site')->get('page.front');
+
+  // Check if this node is the front page
+  if ($front_page_path === '/node/' . $node->id()) {
+    // Get the current user
+    $current_user = \Drupal::currentUser();
+    $uid = $current_user->id();
+    $username = $current_user->getDisplayName();
+
+    // Log the attempted deletion, log which user attempted this
+    \Drupal::logger('ucb_admin_menus')->error(
+      'User @username (UID: @uid) attempted to delete the front-page node (ID: @nid).',
+      [
+        '@username' => $username,
+        '@uid' => $uid,
+        '@nid' => $node->id(),
+      ]
+    );
+
+    \Drupal::messenger()->addError(t('You cannot delete the front-page node.'));
+
+    \Drupal::service('router.builder')->rebuild();
+    $response = new \Symfony\Component\HttpFoundation\RedirectResponse('/admin/content');
+    $response->send();
+    exit;
+  }
 }

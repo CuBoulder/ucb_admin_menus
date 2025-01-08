@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Prevent the homepage from being deleted
+  Previously the homepage could be deleted, whether accidentally or maliciously. This update prevents that from happening as well as logs the user that attempted this action.
+  
+  Resolves #40 
+---
+
 - ### Corrects help redirect (v1.3.1)
   This update corrects the `/admin/help` redirect to the [Drupal 10 documentation](https://webexpress.colorado.edu/).
   

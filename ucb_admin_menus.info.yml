@@ -1,7 +1,7 @@
 name: CU Boulder Admin Menus
 description: 'Provides custom admin menus for CU Boulder sites.'
 type: module
-core_version_requirement: '^9.5 || ^10'
+core_version_requirement: '^10 || ^11'
 dependencies:
   - admin_toolbar_tools
   - node

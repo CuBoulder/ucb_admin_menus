@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### D11 version bump
+  D11 version bump
+---
+
 - ### Prevent the homepage from being deleted
   Previously the homepage could be deleted, whether accidentally or maliciously. This update prevents that from happening as well as logs the user that attempted this action.
   
